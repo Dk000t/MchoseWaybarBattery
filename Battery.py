@@ -36,13 +36,9 @@ options = Options()
 # Set the path to the Chrome user data directory, so Chrome uses this profile's data (cookies, bookmarks, extensions, etc.)
 options.add_argument(f"user-data-dir={CHROME_PROFILE_PATH}")
 
-# Launch chromium in headless mode
+# Set up Chrome options
 options.add_argument("--headless=new")
-
-# Disable sandbox
 options.add_argument("--no-sandbox")
-
-# Disable gpu
 options.add_argument("--disable-gpu")
 
 try:
