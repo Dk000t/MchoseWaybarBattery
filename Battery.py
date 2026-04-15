@@ -47,17 +47,20 @@ try:
     # Creates a chromium instance with the defined options
     driver = webdriver.Chrome(options=options)
     
+    # Set the maximum timeout, e.g. 30 seconds
+    wait = WebDriverWait(driver, 30)
+    
     # Open the defined URL
     driver.get(URL)
     
-    # Wait until all values ​​have been updated, this prevents placeholders from being used before the battery status is queried.
-    time.sleep(5)
+    # Wait until the element with class "name" is visible and then grab it
+    name = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".name")))
+
+    # Wait until the element with class "other-equipment" is visible and then grab it
+    battery = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".other-equipment")))
     
-    # Get the mouse name
-    name = driver.find_element(By.CSS_SELECTOR, ".name")
-    
-    # Get battery percentage
-    battery = driver.find_element(By.CSS_SELECTOR, ".other-equipment")
+    # Avoid placeholder acquisition
+    time.sleep(2)
     
     # Print the battery icon, name and percentage
     print("" + "  " + battery.text + " " + "-" + " " + "MCHOSE" + " " + name.text)
