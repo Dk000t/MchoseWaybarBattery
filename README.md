@@ -1,4 +1,4 @@
-# MchoseWaybarBattery
+# MCHOSEWaybarBattery
 
 This script is written in python and automates the acquisition of the battery percentage for the MCHOSE mouse through selenium and chromium in order to then display its value on the waybar on linux.
 
