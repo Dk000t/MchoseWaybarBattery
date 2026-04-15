@@ -55,7 +55,7 @@ try:
     driver.get(URL)
     
     # Wait until all values ​​have been updated, this prevents placeholders from being used before the battery status is queried.
-    time.sleep(2)
+    time.sleep(5)
     
     # Get the mouse name
     name = driver.find_element(By.CSS_SELECTOR, ".name")
