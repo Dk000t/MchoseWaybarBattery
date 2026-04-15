@@ -7,15 +7,6 @@ This Python script automates the retrieval of the battery percentage for the MCH
 <p></p>
 
 ## Instructions
-
-### Create the chromium user directory:
-```bash
-mkdir -p $HOME/.config/chromium_battery
-```
-### Start Chromium using the created user directory:
-```bash
-chromium --user-data-dir=$HOME/.config/chromium_battery
-```
 ### Get the Vendor ID and Product ID of your mouse:
 ```bash
 lsusb
@@ -31,6 +22,14 @@ KERNEL=="hidraw*", ATTRS{idVendor}=="3837", ATTRS{idProduct}=="100b", MODE="0666
 ### Reload udev rules
 ```bash
 udevadm control --reload && udevadm trigger
+```
+### Create the chromium user directory:
+```bash
+mkdir -p $HOME/.config/chromium_battery
+```
+### Start Chromium using the created user directory:
+```bash
+chromium --user-data-dir=$HOME/.config/chromium_battery
 ```
 ### Open the MCHOSE webdriver website and pair your mouse:
 ```bash
