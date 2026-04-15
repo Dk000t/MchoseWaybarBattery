@@ -59,9 +59,6 @@ try:
     # Wait until the element with class "other-equipment" is visible and then grab it
     battery = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".other-equipment")))
     
-    # Avoid placeholder acquisition
-    time.sleep(2)
-    
     # Print the battery icon, name and percentage
     print("" + "  " + battery.text + " " + "-" + " " + "MCHOSE" + " " + name.text)
 
