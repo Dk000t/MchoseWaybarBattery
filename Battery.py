@@ -63,7 +63,7 @@ try:
     # Get battery percentage
     battery = driver.find_element(By.CSS_SELECTOR, ".other-equipment")
     
-    # Print the battery icon and percentage
+    # Print the battery icon, name and percentage
     print("" + "  " + battery.text + " " + "-" + " " + "MCHOSE" + " " + name.text)
 
 finally:
