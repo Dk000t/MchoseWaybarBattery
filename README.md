@@ -18,7 +18,7 @@ chromium --user-data-dir=$HOME/.config/chromium_battery
 ```
 ### Open the MCHOSE webdriver website and pair your mouse:
 ```bash
-https://www.mchose.com.cn/#/home
+https://www.mchose.com.cn
 ```
 ### Create the folder for the script and copy the script inside:
 ```bash
