@@ -66,20 +66,23 @@ options.add_argument("--disable-gpu")
 # Create chromium driver
 driver = create_driver()
 
+# Timeout
+wait = WebDriverWait(driver, 10)  
+
 # Wait for a connection to be available
 wait_connection()
 
 # Open the URL
 driver.get(URL)
+    
+# Grab mouse name 
+name = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".name"))) 
+
+# Grab battery status 
+battery = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".other-equipment")))
 
 # Avoid placeholder values ​​in the battery, waiting until an item is visible is not enough.
-time.sleep(5)
-    
-# Grab mouse name
-name = driver.find_element(By.CSS_SELECTOR, ".name")
-    
-# Grab battery status
-battery = driver.find_element(By.CSS_SELECTOR, ".other-equipment")
+time.sleep(2)
     
 # Print the battery icon, name and percentage
 print("" + "  " + battery.text + " " + "-" + " " + "MCHOSE" + " " + name.text)
