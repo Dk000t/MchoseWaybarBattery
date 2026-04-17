@@ -80,9 +80,6 @@ name = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".name")))
 
 # Grab battery status 
 battery = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".other-equipment")))
-
-# Avoid placeholder values ​​in the battery, waiting until an item is visible is not enough.
-time.sleep(2)
     
 # Print the battery icon, name and percentage
 print("" + "  " + battery.text + " " + "-" + " " + "MCHOSE" + " " + name.text)
