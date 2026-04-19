@@ -7,6 +7,9 @@ This Python script automates the retrieval of the battery percentage for the MCH
 <p></p>
 
 ## Instructions
+
+Install chromium, python, python-selenium and python-requests.
+
 ### Get the Vendor ID and Product ID of your mouse:
 ```bash
 lsusb
