@@ -35,6 +35,10 @@ chromium --user-data-dir=$HOME/.config/chromium_battery
 ```bash
 www.mchose.com.cn
 ```
+### Copy the URL you see in the address bar for your mouse and edit it in the script (example from MCHOSE A7 V2 ULTRA):
+```bash
+https://www.mchose.com.cn/#/detail?deviceName=MCHOSE+A7+V2+Ultra
+```
 ### Create the folder for the script and copy the script inside:
 ```bash
 mkdir -p $HOME/.config/waybar/scripts
