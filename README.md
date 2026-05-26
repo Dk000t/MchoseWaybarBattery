@@ -48,10 +48,6 @@ https://www.mchose.com.cn/#/detail?deviceName=MCHOSE+A7+V2+Ultra
 ```bash
 mkdir -p $HOME/.config/waybar/scripts
 ```
-### Make the script executable:
-```bash
-chmod +x $HOME/.config/waybar/scripts/Battery.py
-```
 ### Add configuration to waybar:
 ```
   "custom/mouse": {
